@@ -47,7 +47,7 @@ jobs:
     outputs:
       image_tag: ${{ steps.vars.outputs.image_tag }}
     env:
-      REACT_APP_MOVIE_API_URL: http://localhost:5000
+      REACT_APP_MOVIE_API_URL: http://a873975fd655b4876966a6f2228ff16b-724613393.us-east-1.elb.amazonaws.com
     steps:
       - uses: actions/checkout@v4
       - id: vars

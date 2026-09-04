@@ -46,8 +46,6 @@ jobs:
     needs: [lint, test]
     outputs:
       image_tag: ${{ steps.vars.outputs.image_tag }}
-    env:
-      REACT_APP_MOVIE_API_URL: http://a873975fd655b4876966a6f2228ff16b-724613393.us-east-1.elb.amazonaws.com
     steps:
       - uses: actions/checkout@v4
       - id: vars
@@ -55,7 +53,6 @@ jobs:
       - name: Build docker image
         run: |
           docker build \
-            --build-arg=REACT_APP_MOVIE_API_URL=${{ env.REACT_APP_MOVIE_API_URL }} \
             --tag=mp-frontend:${{ steps.vars.outputs.image_tag }} .
       - name: Save image as artifact
         run: docker save mp-frontend:${{ steps.vars.outputs.image_tag }} -o /tmp/frontend-image.tar

@@ -1,0 +1,363 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 539B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/docker/library/python:3.10-alpine
+#2 DONE 2.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 764B done
+#4 DONE 0.0s
+
+#5 [1/8] FROM public.ecr.aws/docker/library/python:3.10-alpine@sha256:6e67d897508774ad8f2250bbf0c414e029d3bc612b565017fba334b6193a798d
+#5 resolve public.ecr.aws/docker/library/python:3.10-alpine@sha256:6e67d897508774ad8f2250bbf0c414e029d3bc612b565017fba334b6193a798d 0.0s done
+#5 CACHED
+
+#6 [2/8] RUN adduser -u 1000 -D app
+#6 DONE 0.1s
+
+#7 [3/8] RUN apk update &&   apk add   pcre   pcre-dev   build-base   gcc   linux-headers   openssl   libffi-dev   && pip install pipenv
+#7 0.776 v3.24.1-486-gab53c408436 [https://dl-cdn.alpinelinux.org/alpine/v3.24/main]
+#7 0.776 v3.24.1-487-gb97cf2fbd6f [https://dl-cdn.alpinelinux.org/alpine/v3.24/community]
+#7 0.776 OK: 28545 distinct packages available
+#7 0.898 ( 1/31) Installing libgcc (15.2.0-r5)
+#7 0.944 ( 2/31) Installing jansson (2.15.0-r0)
+#7 0.957 ( 3/31) Installing libstdc++ (15.2.0-r5)
+#7 0.997 ( 4/31) Installing zstd-libs (1.5.7-r2)
+#7 1.014 ( 5/31) Installing binutils (2.45.1-r1)
+#7 1.368 ( 6/31) Installing libmagic (5.47-r2)
+#7 1.399 ( 7/31) Installing file (5.47-r2)
+#7 1.407 ( 8/31) Installing libgcc-static (15.2.0-r5)
+#7 1.490 ( 9/31) Installing libgomp (15.2.0-r5)
+#7 1.510 (10/31) Installing libatomic (15.2.0-r5)
+#7 1.520 (11/31) Installing gmp (6.3.0-r4)
+#7 1.647 (12/31) Installing isl26 (0.26-r2)
+#7 1.700 (13/31) Installing mpfr4 (4.2.2-r0)
+#7 1.723 (14/31) Installing mpc1 (1.3.1-r1)
+#7 1.732 (15/31) Installing gcc (15.2.0-r5)
+#7 5.719 (16/31) Installing libstdc++-dev (15.2.0-r5)
+#7 6.083 (17/31) Installing musl-dev (1.2.6-r2)
+#7 6.331 (18/31) Installing g++ (15.2.0-r5)
+#7 7.624 (19/31) Installing make (4.4.1-r4)
+#7 7.642 (20/31) Installing fortify-headers (3.0.1-r2)
+#7 7.654 (21/31) Installing patch (2.8-r0)
+#7 7.669 (22/31) Installing build-base (0.5-r4)
+#7 7.669 (23/31) Installing linux-headers (7.0.0-r1)
+#7 7.802 (24/31) Installing pkgconf (2.5.1-r0)
+#7 7.813 (25/31) Installing libffi-dev (3.5.2-r1)
+#7 7.828 (26/31) Installing openssl (3.5.8-r0)
+#7 7.856 (27/31) Installing pcre (8.45-r4)
+#7 7.873 (28/31) Installing libpcre16 (8.45-r4)
+#7 7.888 (29/31) Installing libpcre32 (8.45-r4)
+#7 7.904 (30/31) Installing libpcrecpp (8.45-r4)
+#7 7.913 (31/31) Installing pcre-dev (8.45-r4)
+#7 7.923 Executing busybox-1.37.0-r31.trigger
+#7 7.927 OK: 263.0 MiB in 69 packages
+#7 8.686 Collecting pipenv
+#7 8.777   Downloading pipenv-2026.8.0-py3-none-any.whl (2.5 MB)
+#7 9.137      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 6.9 MB/s eta 0:00:00
+#7 9.218 Collecting virtualenv>=20.26.6
+#7 9.227   Downloading virtualenv-21.7.8-py3-none-any.whl (5.3 MB)
+#7 11.12      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 2.8 MB/s eta 0:00:00
+#7 11.13 Requirement already satisfied: packaging>=22 in /usr/local/lib/python3.10/site-packages (from pipenv) (26.3)
+#7 11.16 Collecting certifi
+#7 11.17   Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+#7 11.18      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 9.1 MB/s eta 0:00:00
+#7 11.18 Requirement already satisfied: setuptools>=67 in /usr/local/lib/python3.10/site-packages (from pipenv) (79.0.1)
+#7 11.20 Collecting distlib<1,>=0.3.7
+#7 11.21   Downloading distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+#7 11.23      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 470.6/470.6 kB 27.7 MB/s eta 0:00:00
+#7 11.25 Collecting typing-extensions>=4.13.2
+#7 11.25   Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#7 11.26      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 17.6 MB/s eta 0:00:00
+#7 11.27 Collecting python-discovery>=1.6
+#7 11.28   Downloading python_discovery-1.6.0-py3-none-any.whl (38 kB)
+#7 11.31 Collecting filelock<4,>=3.24.2
+#7 11.32   Downloading filelock-3.32.5-py3-none-any.whl (100 kB)
+#7 11.32      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0/100.0 kB 29.8 MB/s eta 0:00:00
+#7 11.35 Collecting platformdirs<5,>=3.9.1
+#7 11.35   Downloading platformdirs-4.11.7-py3-none-any.whl (23 kB)
+#7 11.39 Installing collected packages: distlib, typing-extensions, platformdirs, filelock, certifi, python-discovery, virtualenv, pipenv
+#7 12.01 Successfully installed certifi-2026.7.22 distlib-0.4.3 filelock-3.32.5 pipenv-2026.8.0 platformdirs-4.11.7 python-discovery-1.6.0 typing-extensions-4.16.0 virtualenv-21.7.8
+#7 12.01 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 12.07 
+#7 12.07 [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+#7 12.07 [notice] To update, run: pip install --upgrade pip
+#7 DONE 12.2s
+
+#8 [4/8] RUN mkdir -p /var/www/app && mkdir /app
+#8 DONE 0.1s
+
+#9 [5/8] COPY Pipfile* /app
+#9 DONE 0.0s
+
+#10 [6/8] RUN cd /app && pipenv install --system --deploy
+#10 0.199 Installing dependencies from Pipfile.lock (f8f835)...
+#10 2.570 Collecting attrs==22.2.0 (from -r 
+#10 2.570 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 1))
+#10 2.570   Downloading attrs-22.2.0-py3-none-any.whl (60 kB)
+#10 2.570 Collecting click==8.1.3 (from -r 
+#10 2.570 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 2))
+#10 2.570   Downloading click-8.1.3-py3-none-any.whl (96 kB)
+#10 2.571 Collecting exceptiongroup==1.1.0 (from -r 
+#10 2.571 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 3))
+#10 2.571   Downloading exceptiongroup-1.1.0-py3-none-any.whl (14 kB)
+#10 2.571 Collecting flask==2.2.3 (from -r 
+#10 2.571 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 4))
+#10 2.571   Downloading Flask-2.2.3-py3-none-any.whl (101 kB)
+#10 2.571 Collecting flask-cors==3.0.10 (from -r 
+#10 2.571 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 5))
+#10 2.571   Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+#10 2.572 Collecting iniconfig==2.0.0 (from -r 
+#10 2.572 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 6))
+#10 2.572   Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+#10 2.572 Collecting itsdangerous==2.1.2 (from -r 
+#10 2.572 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 7))
+#10 2.572   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+#10 2.572 Collecting jinja2==3.1.2 (from -r 
+#10 2.572 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 8))
+#10 2.572   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+#10 2.572 Collecting markupsafe==2.1.2 (from -r 
+#10 2.572 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 9))
+#10 2.573   Downloading MarkupSafe-2.1.2-cp310-cp310-musllinux_1_1_aarch64.whl (30 kB)
+#10 2.573 Collecting packaging==23.0 (from -r 
+#10 2.573 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 10))
+#10 2.573   Downloading packaging-23.0-py3-none-any.whl (42 kB)
+#10 2.573 Collecting pluggy==1.0.0 (from -r 
+#10 2.573 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 11))
+#10 2.573   Downloading pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+#10 2.574 Collecting pytest==7.2.1 (from -r 
+#10 2.574 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 12))
+#10 2.574   Downloading pytest-7.2.1-py3-none-any.whl (317 kB)
+#10 2.574 Collecting six==1.16.0 (from -r 
+#10 2.574 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 13))
+#10 2.574   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#10 2.574 Collecting tomli==2.0.1 (from -r 
+#10 2.574 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 14))
+#10 2.575   Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+#10 2.575 Collecting uwsgi==2.0.21 (from -r 
+#10 2.575 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 15))
+#10 2.575   Downloading uwsgi-2.0.21.tar.gz (808 kB)
+#10 2.575      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 808.5/808.5 kB 34.6 MB/s  0:00:00
+#10 2.575   Installing build dependencies: started
+#10 2.575   Installing build dependencies: finished with status 'done'
+#10 2.575   Getting requirements to build wheel: started
+#10 2.575   Getting requirements to build wheel: finished with status 'done'
+#10 2.575   Preparing metadata (pyproject.toml): started
+#10 2.576   Preparing metadata (pyproject.toml): finished with status 'done'
+#10 2.576 Collecting werkzeug==2.2.3 (from -r 
+#10 2.576 /tmp/pipenv-nq829xf3-requirements/pipenv-e6dbz1no-hashed-reqs.txt (line 16))
+#10 2.576   Downloading Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+#10 2.576 Building wheels for collected packages: uwsgi
+#10 2.576   Building wheel for uwsgi (pyproject.toml): started
+#10 2.576   Building wheel for uwsgi (pyproject.toml): finished with status 'error'
+#10 2.576 Failed to build uwsgi
+#10 2.576 error: subprocess-exited-with-error
+#10 2.576   
+#10 2.577   × Building wheel for uwsgi (pyproject.toml) did not run successfully.
+#10 2.577   │ exit code: 1
+#10 2.577   ╰─> [64 lines of output]
+#10 2.577       /tmp/pip-build-env-6trkfd95/overlay/lib/python3.10/site-packages/setuptool
+#10 2.577 s/_vendor/wheel/bdist_wheel.py:4: FutureWarning: The 'wheel' package is no 
+#10 2.577 longer the canonical location of the 'bdist_wheel' command, and will be removed 
+#10 2.577 in a future release. Please update to setuptools v70.1 or later which contains 
+#10 2.577 an integrated version of this command.
+#10 2.577         warn(
+#10 2.577       /tmp/pip-build-env-6trkfd95/overlay/lib/python3.10/site-packages/setuptool
+#10 2.577 s/_distutils/dist.py:318: UserWarning: Unknown distribution option: 
+#10 2.577 'descriptions'
+#10 2.577         warnings.warn(msg)
+#10 2.577       /tmp/pip-build-env-6trkfd95/overlay/lib/python3.10/site-packages/setuptool
+#10 2.577 s/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#10 2.577       !!
+#10 2.578       
+#10 2.578               ******************************************************************
+#10 2.578 **************
+#10 2.578               Please consider removing the following classifiers in favor of a 
+#10 2.578 SPDX license expression:
+#10 2.578       
+#10 2.578               License :: OSI Approved :: GNU General Public License v2 or later 
+#10 2.578 (GPLv2+)
+#10 2.578       
+#10 2.578               See 
+#10 2.578 https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license 
+#10 2.578 for details.
+#10 2.578               ******************************************************************
+#10 2.578 **************
+#10 2.578       
+#10 2.578       !!
+#10 2.579         self._finalize_license_expression()
+#10 2.579       running bdist_wheel
+#10 2.579       running build
+#10 2.579       running build_py
+#10 2.579       creating build/lib
+#10 2.579       copying uwsgidecorators.py -> build/lib
+#10 2.579       warning: build_py: byte-compiling is disabled, skipping.
+#10 2.579       
+#10 2.579       installing to build/bdist.linux-aarch64/wheel
+#10 2.579       running install
+#10 2.579       core/emperor.c: In function 'emperor_loop':
+#10 2.580       core/emperor.c:1685:36: error: passing argument 2 of 'uwsgi_unix_signal' 
+#10 2.580 from incompatible pointer type [-Wincompatible-pointer-types]
+#10 2.580        1685 |         uwsgi_unix_signal(SIGUSR1, emperor_stats);
+#10 2.580             |                                    ^~~~~~~~~~~~~
+#10 2.580             |                                    |
+#10 2.580             |                                    void (*)(void)
+#10 2.580       In file included from core/emperor.c:6:
+#10 2.580       ./uwsgi.h:3461:29: note: expected 'void (*)(int)' but argument is of type 
+#10 2.580 'void (*)(void)'
+#10 2.580        3461 | void uwsgi_unix_signal(int, void (*)(int));
+#10 2.580             |                             ^~~~~~~~~~~~~
+#10 2.581       core/emperor.c:601:13: note: 'emperor_stats' declared here
+#10 2.581         601 | static void emperor_stats() {
+#10 2.581             |             ^~~~~~~~~~~~~
+#10 2.581       core/master_utils.c: In function 'uwsgi_respawn_worker':
+#10 2.581       core/master_utils.c:711:34: error: passing argument 2 of 'signal' from 
+#10 2.581 incompatible pointer type [-Wincompatible-pointer-types]
+#10 2.581         711 |                 signal(SIGWINCH, worker_wakeup);
+#10 2.581             |                                  ^~~~~~~~~~~~~
+#10 2.581             |                                  |
+#10 2.582             |                                  void (*)(void)
+#10 2.582       In file included from ./uwsgi.h:168,
+#10 2.582                        from core/master_utils.c:1:
+#10 2.582       /usr/include/signal.h:289:20: note: expected 'void (*)(int)' but argument 
+#10 2.582 is of type 'void (*)(void)'
+#10 2.582         289 | void (*signal(int, void (*)(int)))(int);
+#10 2.582             |                    ^~~~~~~~~~~~~
+#10 2.582       core/master_utils.c:5:6: note: 'worker_wakeup' declared here
+#10 2.582           5 | void worker_wakeup() {
+#10 2.582             |      ^~~~~~~~~~~~~
+#10 2.583       core/master_utils.c:712:33: error: passing argument 2 of 'signal' from 
+#10 2.583 incompatible pointer type [-Wincompatible-pointer-types]
+#10 2.583         712 |                 signal(SIGTSTP, worker_wakeup);
+#10 2.583             |                                 ^~~~~~~~~~~~~
+#10 2.583             |                                 |
+#10 2.583             |                                 void (*)(void)
+#10 2.583       /usr/include/signal.h:289:20: note: expected 'void (*)(int)' but argument 
+#10 2.583 is of type 'void (*)(void)'
+#10 2.583         289 | void (*signal(int, void (*)(int)))(int);
+#10 2.583             |                    ^~~~~~~~~~~~~
+#10 2.583       core/master_utils.c:5:6: note: 'worker_wakeup' declared here
+#10 2.584           5 | void worker_wakeup() {
+#10 2.584             |      ^~~~~~~~~~~~~
+#10 2.584       
+#10 2.584   
+#10 2.584   note: This error originates from a subprocess, and is likely not a problem 
+#10 2.584 with pip.
+#10 2.584   ERROR: Failed building wheel for uwsgi
+#10 2.584 error: failed-wheel-build-for-install
+#10 2.584 
+#10 2.584 × Failed to build installable wheels for some pyproject.toml based projects
+#10 2.584 ╰─> uwsgi
+#10 2.591 ERROR: Couldn't install package(s): attrs==22.2.0; python_version >= '3.6' 
+#10 2.591 --hash=sha256:29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836 
+#10 2.591 --hash=sha256:c9227bfc2f01993c03f68db37d1d15c9690188323c067c641f1a35ca58185f99, 
+#10 2.591 click==8.1.3; python_version >= '3.7' 
+#10 2.591 --hash=sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e 
+#10 2.591 --hash=sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48, 
+#10 2.591 exceptiongroup==1.1.0; python_version < '3.11' 
+#10 2.591 --hash=sha256:327cbda3da756e2de031a3107b81ab7b3770a602c4d16ca618298c526f4bec1e 
+#10 2.591 --hash=sha256:bcb67d800a4497e1b404c2dd44fca47d3b7a5e5433dbab67f96c1a685cdfdf23, 
+#10 2.591 flask==2.2.3 
+#10 2.591 --hash=sha256:7eb373984bf1c770023fce9db164ed0c3353cd0b53f130f4693da0ca756a2e6d 
+#10 2.591 --hash=sha256:c0bec9477df1cb867e5a67c9e1ab758de9cb4a3e52dd70681f59fa40a62b3f2d, 
+#10 2.591 flask-cors==3.0.10 
+#10 2.591 --hash=sha256:74efc975af1194fc7891ff5cd85b0f7478be4f7f59fe158102e91abb72bb4438 
+#10 2.591 --hash=sha256:b60839393f3b84a0f3746f6cdca56c1ad7426aa738b70d6c61375857823181de, 
+#10 2.591 iniconfig==2.0.0; python_version >= '3.7' 
+#10 2.591 --hash=sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3 
+#10 2.591 --hash=sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374, 
+#10 2.591 itsdangerous==2.1.2; python_version >= '3.7' 
+#10 2.591 --hash=sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44 
+#10 2.591 --hash=sha256:5dbbc68b317e5e42f327f9021763545dc3fc3bfe22e6deb96aaf1fc38874156a, 
+#10 2.591 jinja2==3.1.2; python_version >= '3.7' 
+#10 2.591 --hash=sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852 
+#10 2.591 --hash=sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61, 
+#10 2.591 markupsafe==2.1.2; python_version >= '3.7' 
+#10 2.591 --hash=sha256:0576fe974b40a400449768941d5d0858cc624e3249dfd1e0c33674e5c7ca7aed 
+#10 2.591 --hash=sha256:085fd3201e7b12809f9e6e9bc1e5c96a368c8523fad5afb02afe3c051ae4afcc 
+#10 2.591 --hash=sha256:090376d812fb6ac5f171e5938e82e7f2d7adc2b629101cec0db8b267815c85e2 
+#10 2.591 --hash=sha256:0b462104ba25f1ac006fdab8b6a01ebbfbce9ed37fd37fd4acd70c67c973e460 
+#10 2.591 --hash=sha256:137678c63c977754abe9086a3ec011e8fd985ab90631145dfb9294ad09c102a7 
+#10 2.591 --hash=sha256:1bea30e9bf331f3fef67e0a3877b2288593c98a21ccb2cf29b74c581a4eb3af0 
+#10 2.591 --hash=sha256:22152d00bf4a9c7c83960521fc558f55a1adbc0631fbb00a9471e097b19d72e1 
+#10 2.591 --hash=sha256:22731d79ed2eb25059ae3df1dfc9cb1546691cc41f4e3130fe6bfbc3ecbbecfa 
+#10 2.591 --hash=sha256:2298c859cfc5463f1b64bd55cb3e602528db6fa0f3cfd568d3605c50678f8f03 
+#10 2.591 --hash=sha256:28057e985dace2f478e042eaa15606c7efccb700797660629da387eb289b9323 
+#10 2.591 --hash=sha256:2e7821bffe00aa6bd07a23913b7f4e01328c3d5cc0b40b36c0bd81d362faeb65 
+#10 2.591 --hash=sha256:2ec4f2d48ae59bbb9d1f9d7efb9236ab81429a764dedca114f5fdabbc3788013 
+#10 2.591 --hash=sha256:340bea174e9761308703ae988e982005aedf427de816d1afe98147668cc03036 
+#10 2.591 --hash=sha256:40627dcf047dadb22cd25ea7ecfe9cbf3bbbad0482ee5920b582f3809c97654f 
+#10 2.591 --hash=sha256:40dfd3fefbef579ee058f139733ac336312663c6706d1163b82b3003fb1925c4 
+#10 2.591 --hash=sha256:4cf06cdc1dda95223e9d2d3c58d3b178aa5dacb35ee7e3bbac10e4e1faacb419 
+#10 2.591 --hash=sha256:50c42830a633fa0cf9e7d27664637532791bfc31c731a87b202d2d8ac40c3ea2 
+#10 2.591 --hash=sha256:55f44b440d491028addb3b88f72207d71eeebfb7b5dbf0643f7c023ae1fba619 
+#10 2.591 --hash=sha256:608e7073dfa9e38a85d38474c082d4281f4ce276ac0010224eaba11e929dd53a 
+#10 2.591 --hash=sha256:63ba06c9941e46fa389d389644e2d8225e0e3e5ebcc4ff1ea8506dce646f8c8a 
+#10 2.591 --hash=sha256:65608c35bfb8a76763f37036547f7adfd09270fbdbf96608be2bead319728fcd 
+#10 2.591 --hash=sha256:665a36ae6f8f20a4676b53224e33d456a6f5a72657d9c83c2aa00765072f31f7 
+#10 2.591 --hash=sha256:6d6607f98fcf17e534162f0709aaad3ab7a96032723d8ac8750ffe17ae5a0666 
+#10 2.591 --hash=sha256:7313ce6a199651c4ed9d7e4cfb4aa56fe923b1adf9af3b420ee14e6d9a73df65 
+#10 2.591 --hash=sha256:7668b52e102d0ed87cb082380a7e2e1e78737ddecdde129acadb0eccc5423859 
+#10 2.591 --hash=sha256:7df70907e00c970c60b9ef2938d894a9381f38e6b9db73c5be35e59d92e06625 
+#10 2.591 --hash=sha256:7e007132af78ea9df29495dbf7b5824cb71648d7133cf7848a2a5dd00d36f9ff 
+#10 2.591 --hash=sha256:835fb5e38fd89328e9c81067fd642b3593c33e1e17e2fdbf77f5676abb14a156 
+#10 2.591 --hash=sha256:8bca7e26c1dd751236cfb0c6c72d4ad61d986e9a41bbf76cb445f69488b2a2bd 
+#10 2.591 --hash=sha256:8db032bf0ce9022a8e41a22598eefc802314e81b879ae093f36ce9ddf39ab1ba 
+#10 2.591 --hash=sha256:99625a92da8229df6d44335e6fcc558a5037dd0a760e11d84be2260e6f37002f 
+#10 2.591 --hash=sha256:9cad97ab29dfc3f0249b483412c85c8ef4766d96cdf9dcf5a1e3caa3f3661cf1 
+#10 2.591 --hash=sha256:a4abaec6ca3ad8660690236d11bfe28dfd707778e2442b45addd2f086d6ef094 
+#10 2.591 --hash=sha256:a6e40afa7f45939ca356f348c8e23048e02cb109ced1eb8420961b2f40fb373a 
+#10 2.591 --hash=sha256:a6f2fcca746e8d5910e18782f976489939d54a91f9411c32051b4aab2bd7c513 
+#10 2.591 --hash=sha256:a806db027852538d2ad7555b203300173dd1b77ba116de92da9afbc3a3be3eed 
+#10 2.591 --hash=sha256:abcabc8c2b26036d62d4c746381a6f7cf60aafcc653198ad678306986b09450d 
+#10 2.591 --hash=sha256:b8526c6d437855442cdd3d87eede9c425c4445ea011ca38d937db299382e6fa3 
+#10 2.591 --hash=sha256:bb06feb762bade6bf3c8b844462274db0c76acc95c52abe8dbed28ae3d44a147 
+#10 2.591 --hash=sha256:c0a33bc9f02c2b17c3ea382f91b4db0e6cde90b63b296422a939886a7a80de1c 
+#10 2.591 --hash=sha256:c4a549890a45f57f1ebf99c067a4ad0cb423a05544accaf2b065246827ed9603 
+#10 2.591 --hash=sha256:ca244fa73f50a800cf8c3ebf7fd93149ec37f5cb9596aa8873ae2c1d23498601 
+#10 2.591 --hash=sha256:cf877ab4ed6e302ec1d04952ca358b381a882fbd9d1b07cccbfd61783561f98a 
+#10 2.591 --hash=sha256:d9d971ec1e79906046aa3ca266de79eac42f1dbf3612a05dc9368125952bd1a1 
+#10 2.591 --hash=sha256:da25303d91526aac3672ee6d49a2f3db2d9502a4a60b55519feb1a4c7714e07d 
+#10 2.591 --hash=sha256:e55e40ff0cc8cc5c07996915ad367fa47da6b3fc091fdadca7f5403239c5fec3 
+#10 2.591 --hash=sha256:f03a532d7dee1bed20bc4884194a16160a2de9ffc6354b3878ec9682bb623c54 
+#10 2.591 --hash=sha256:f1cd098434e83e656abf198f103a8207a8187c0fc110306691a2e94a78d0abb2 
+#10 2.591 --hash=sha256:f2bfb563d0211ce16b63c7cb9395d2c682a23187f54c3d79bfec33e6705473c6 
+#10 2.591 --hash=sha256:f8ffb705ffcf5ddd0e80b65ddf7bed7ee4f5a441ea7d3419e861a12eaf41af58, 
+#10 2.591 packaging==23.0; python_version >= '3.7' 
+#10 2.591 --hash=sha256:714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2 
+#10 2.591 --hash=sha256:b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97, 
+#10 2.591 ...
+#10 2.591 Package installation failed...
+#10 ERROR: process "/bin/sh -c cd /app && pipenv install --system --deploy" did not complete successfully: exit code: 1
+------
+ > [6/8] RUN cd /app && pipenv install --system --deploy:
+2.591 --hash=sha256:e55e40ff0cc8cc5c07996915ad367fa47da6b3fc091fdadca7f5403239c5fec3 
+2.591 --hash=sha256:f03a532d7dee1bed20bc4884194a16160a2de9ffc6354b3878ec9682bb623c54 
+2.591 --hash=sha256:f1cd098434e83e656abf198f103a8207a8187c0fc110306691a2e94a78d0abb2 
+2.591 --hash=sha256:f2bfb563d0211ce16b63c7cb9395d2c682a23187f54c3d79bfec33e6705473c6 
+2.591 --hash=sha256:f8ffb705ffcf5ddd0e80b65ddf7bed7ee4f5a441ea7d3419e861a12eaf41af58, 
+2.591 packaging==23.0; python_version >= '3.7' 
+2.591 --hash=sha256:714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2 
+2.591 --hash=sha256:b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97, 
+2.591 ...
+2.591 Package installation failed...
+------
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 24)
+Dockerfile:20
+--------------------
+  18 |     
+  19 |     COPY Pipfile* /app
+  20 | >>> RUN cd /app && pipenv install --system --deploy
+  21 |     
+  22 |     COPY . /app
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c cd /app && pipenv install --system --deploy" did not complete successfully: exit code: 1

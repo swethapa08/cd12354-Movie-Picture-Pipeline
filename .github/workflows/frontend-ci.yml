@@ -40,13 +40,20 @@ jobs:
       - name: Run tests
         run: CI=true npm test
 
-  build:
+    build:
     runs-on: ubuntu-latest
     needs: [lint, test]
     env:
       REACT_APP_MOVIE_API_URL: http://localhost:5000
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: starter/frontend/package-lock.json
+      - name: Install dependencies
+        run: npm ci
       - name: Build docker image
         run: |
           docker build \

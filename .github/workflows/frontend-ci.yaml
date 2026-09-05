@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'starter/frontend/**'
+      - '.github/workflows/frontend-ci.yaml'
   workflow_dispatch:
 
 defaults:
